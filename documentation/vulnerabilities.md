@@ -2,20 +2,20 @@
 
 ## Ready implementations
 
-  -6 … - bugmode = true, which means that when going to localhost:8000 (which is not in use) you can see all the sites and maybe find sites where to wander
+- 6 … - bugmode = true, which means that when going to localhost:8000 (which is not in use) you can see all the sites and maybe find sites where to wander
 
-  -… & 5 - to make this more convenient, the programmer has forgotten to make the voting page @login_required so it is fully available to anyone wandering there
+- … & 5 - to make this more convenient, the programmer has forgotten to make the voting page @login_required so it is fully available to anyone wandering there
 
-  -2 & 5 - because the admin-page’s password sec. controls are non-existent (commented in mysite-settings) one user is using weak password and has accidentally superuser-access to the admin-page, anyone can bruteforce this with a little bit of luck
+- 2 & 5 - because the admin-page’s password sec. controls are non-existent (commented in mysite-settings) one user is using weak password and has accidentally superuser-access to the admin-page, anyone can bruteforce this with a little bit of luck
 
 
 **Test users and passwords**
 
-  -bob – builder
+- bob – builder
 
-  -crusty – clown
+- crusty – clown
 
-  -evan – allmighty
+- evan – allmighty
 
 all users have access to admin page but unfortunately crusty has superuser-access as well
 
