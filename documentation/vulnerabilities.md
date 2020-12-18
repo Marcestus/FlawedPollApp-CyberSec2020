@@ -8,6 +8,8 @@
 
 - 2 & 5 - because the admin-page’s password sec. controls are non-existent (commented in mysite-settings) one user is using weak password and has accidentally superuser-access to the admin-page, anyone can bruteforce this with a little bit of luck
 
+- 10 - while testing that the password can be scanned, there are no logging of this happening in the admin page or anywhere else
+
 
 **Test users and passwords**
 
@@ -137,7 +139,7 @@ Note: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (
 
 ## 8. Insecure Deserialization  (seems too hard to implement)
 
-*More on the subject:** [owasp - insecure deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)
+**More on the subject:** [owasp - insecure deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)
 
 ## 9. Using Components with Known Vulnerabilities
 
@@ -153,6 +155,16 @@ Components typically run with the same privileges as the application itself, so 
 
 **More on the subject:** [owasp - components with known vulnerabilities](https://owasp.org/www-project-top-ten/2017/A9_2017-Using_Components_with_Known_Vulnerabilities)
 
-## 10. Insufficient Logging & Monitoring (seems too hard to implement)
+## 10. Insufficient Logging & Monitoring
 
-*More on the subject:* [owasp - insufficient logging & monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
+Insufficient logging and monitoring, coupled with missing or ineffective integration with incident response, allows attackers to further attack systems, maintain persistence, pivot to more systems, and tamper, extract, or destroy data.
+
+**Vulnerable to attack when:**
+
+Auditable events, such as logins, failed logins, and high-value transactions are not logged.
+
+**Examples:**
+
+An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
+
+**More on the subject:** [owasp - insufficient logging & monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
