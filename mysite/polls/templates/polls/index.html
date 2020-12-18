@@ -3,12 +3,26 @@
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8">
     <title>My polls</title>
   </head>
   <body>
+  	<h1>Awesome polls by Marcestus</h1>
+
+    <table>
+	<tr>
+	<th style="text-align:left">Username: <td>{{user.username}} 
+	</table>
+
+    <form action='logout/' method="POST">
+		{% csrf_token %}
+        <input type="submit" value="Logout"/>
+    </form>
+
+    <h1>Polls available for vote</h1>
+
     {% if latest_question_list %}
 	    <ul>
 	    {% for question in latest_question_list %}

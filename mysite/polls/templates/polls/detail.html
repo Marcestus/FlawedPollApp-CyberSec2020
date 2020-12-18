@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8">
     <title>My polls</title>
@@ -9,7 +9,7 @@
 
 		{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-		<form action="{% url 'polls:vote' question.id %}" method="post">
+		<form action="{% url 'polls:vote' question.id %}" method="POST">
 		{% csrf_token %}
 		{% for choice in question.choice_set.all %}
 		    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
@@ -18,5 +18,8 @@
 		<input type="submit" value="Vote">
 		</form>
 	</ul>
+
+	<a href="{% url 'polls:index'%}">Vote for something else?</a>
+
   </body>
 </html>

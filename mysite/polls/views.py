@@ -3,19 +3,22 @@
 # (you’ll want to keep HttpResponse if you still have
 # the stub methods for detail, results, and vote).
 
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import get_object_or_404, render, redirect
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from django.db.models import Q
+from django.contrib.auth.models import User
+import json
 
-from .models import Choice, Question
-
+from .models import Choice, Question, Account
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
-
+    
     def get_queryset(self):
 	    """
 	    Return the last five published questions (not including those set to be
