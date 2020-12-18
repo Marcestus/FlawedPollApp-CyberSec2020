@@ -2,6 +2,8 @@
 
 ## Ready implementations
 
+- 7 - search-query is done unsafely and can be used for XSS attack
+
 - 6 - bugmode = true, which means that when going to localhost:8000 (which is not in use) you can see all the sites and maybe find sites where to wander
 
 - 5 - to make this more convenient, the programmer has forgotten to make the voting page @login_required so it is fully available to anyone wandering there
