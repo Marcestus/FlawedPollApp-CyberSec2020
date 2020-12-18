@@ -137,7 +137,7 @@ Note: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (
 
 ## 8. Insecure Deserialization  (seems too hard to implement)
 
-*More on the subject:** [owasp - insecure deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)
+**More on the subject:** [owasp - insecure deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)
 
 ## 9. Using Components with Known Vulnerabilities
 
@@ -155,4 +155,4 @@ Components typically run with the same privileges as the application itself, so 
 
 ## 10. Insufficient Logging & Monitoring (seems too hard to implement)
 
-*More on the subject:* [owasp - insufficient logging & monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
+**More on the subject:** [owasp - insufficient logging & monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
