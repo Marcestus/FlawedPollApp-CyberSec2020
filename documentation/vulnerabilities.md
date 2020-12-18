@@ -1,26 +1,26 @@
-#OWASP TOP 10
+# OWASP TOP 10
 
-##Ready implementations
+## Ready implementations
 
-- 6 … - bugmode = true, which means that when going to localhost:8000 (which is not in use) you can see all the sites and maybe find sites where to wander
+  -6 … - bugmode = true, which means that when going to localhost:8000 (which is not in use) you can see all the sites and maybe find sites where to wander
 
-- … & 5 - to make this more convenient, the programmer has forgotten to make the voting page @login_required so it is fully available to anyone wandering there
+  -… & 5 - to make this more convenient, the programmer has forgotten to make the voting page @login_required so it is fully available to anyone wandering there
 
-- 2 & 5 - because the admin-page’s password sec. controls are non-existent (commented in mysite-settings) one user is using weak password and has accidentally superuser-access to the admin-page, anyone can bruteforce this with a little bit of luck
+  -2 & 5 - because the admin-page’s password sec. controls are non-existent (commented in mysite-settings) one user is using weak password and has accidentally superuser-access to the admin-page, anyone can bruteforce this with a little bit of luck
 
 
 **Test users and passwords**
 
-bob – builder
+  -bob – builder
 
-crusty – clown
+  -crusty – clown
 
-evan – allmighty
+  -evan – allmighty
 
 all users have access to admin page but unfortunately crusty has superuser-access as well
 
 
-##1. Injection
+## 1. Injection
 
 Untrusted data is sent to an interpreter as part of a command or query.
 Attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.
@@ -38,7 +38,7 @@ For example: http://example.com/app/accountView?id=' or '1'='1
 
 **More on the subject:** [owasp-injection](https://owasp.org/www-project-top-ten/2017/A1_2017-Injection)
 
-##2. Broken Authentication
+## 2. Broken Authentication
 
 Application functions related to authentication and session management are often implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens.
 
@@ -66,15 +66,15 @@ Most authentication attacks occur due to the continued use of passwords as a sol
 
 **More on the subject:** [Owasp - broken authentication](https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication)
 
-##3. Sensitive Data Exposure (seems too hard to implement)
+## 3. Sensitive Data Exposure (seems too hard to implement)
 
 **More on the subject:** [owasp - sensitivite data exposure](https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure)
 
-##4. XML External Entities (XXE) (seems too hard to implement)
+## 4. XML External Entities (XXE) (seems too hard to implement)
 
 More on the subject: https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE)
 
-##5. Broken Access Control
+## 5. Broken Access Control
 
 Restrictions on what authenticated users are allowed to do are often not properly enforced. Attackers can exploit these flaws to access unauthorized functionality and/or data, such as access other users’ accounts, view sensitive files, modify other users’ data, change access rights, etc.
 
@@ -101,7 +101,7 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 
 **More on the subject:** [owasp - broken access control]( https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control)
 
-##6. Security Misconfiguration
+## 6. Security Misconfiguration
 
 This is commonly a result of insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information. Not only must all operating systems, frameworks, libraries, and applications be securely configured, but they must be patched/upgraded in a timely fashion.
 
@@ -121,7 +121,7 @@ The application server’s configuration allows detailed error messages, e.g. st
 
 **More on the subject:** [owasp - security misconfigurations]( https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration)
 
-##7. Cross-Site Scripting (XSS)
+## 7. Cross-Site Scripting (XSS)
 
 XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.
 
@@ -146,11 +146,11 @@ Note: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (
 
 **More on the subject:** [owasp - xss](https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS))
 
-##8. Insecure Deserialization  (seems too hard to implement)
+## 8. Insecure Deserialization  (seems too hard to implement)
 
 *More on the subject:** https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization
 
-##9. Using Components with Known Vulnerabilities
+## 9. Using Components with Known Vulnerabilities
 
 Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application. If a vulnerable component is exploited, such an attack can facilitate serious data loss or server takeover. Applications and APIs using components with known vulnerabilities may undermine application defenses and enable various attacks and impacts.
 
@@ -164,6 +164,6 @@ Components typically run with the same privileges as the application itself, so 
 
 **More on the subject:** [owasp - components with known vulnerabilities](https://owasp.org/www-project-top-ten/2017/A9_2017-Using_Components_with_Known_Vulnerabilities)
 
-##10. Insufficient Logging & Monitoring (seems too hard to implement)
+## 10. Insufficient Logging & Monitoring (seems too hard to implement)
 
 *More on the subject:* [owasp - insufficient logging & monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
