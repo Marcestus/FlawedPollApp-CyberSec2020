@@ -155,6 +155,16 @@ Components typically run with the same privileges as the application itself, so 
 
 **More on the subject:** [owasp - components with known vulnerabilities](https://owasp.org/www-project-top-ten/2017/A9_2017-Using_Components_with_Known_Vulnerabilities)
 
-## 10. Insufficient Logging & Monitoring (seems too hard to implement)
+## 10. Insufficient Logging & Monitoring
+
+Insufficient logging and monitoring, coupled with missing or ineffective integration with incident response, allows attackers to further attack systems, maintain persistence, pivot to more systems, and tamper, extract, or destroy data.
+
+**Vulnerable to attack when:**
+
+Auditable events, such as logins, failed logins, and high-value transactions are not logged.
+
+**Examples:**
+
+An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
 
 **More on the subject:** [owasp - insufficient logging & monitoring](https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring)
