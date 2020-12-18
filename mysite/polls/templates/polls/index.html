@@ -33,11 +33,9 @@
     <h1>Search polls</h1>
 
     <form method="get">
-      <label for="query">Search: </label>
-      <input type="text" id="query" name="query" />
+      <input type="text" id="search" name="search" />
       <input type="submit" value="Search" />
     </form>
-
     <span id="search-query" ></span>
 
 	{% else %}
@@ -45,10 +43,10 @@
 	{% endif %}
 
   <script type="application/javascript">
-    var searchParams = new URLSearchParams(document.location.search);
-    if (searchParams.has("query"))
+    var searchResult = new URLSearchParams(document.location.search);
+    if (searchResult.has("search"))
     {
-      document.getElementById("search-query").innerHTML = "You searched for " + searchParams.get("query")
+      document.getElementById("search-query").innerHTML = "The poll you searched is " + searchResult.get("search")
     }
   </script>
 
