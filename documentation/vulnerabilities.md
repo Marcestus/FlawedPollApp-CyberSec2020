@@ -8,6 +8,8 @@
 
 - 2 & 5 - because the admin-page’s password sec. controls are non-existent (commented in mysite-settings) one user is using weak password and has accidentally superuser-access to the admin-page, anyone can bruteforce this with a little bit of luck
 
+- 10 - while testing that the password can be scanned, there are no logging of this happening in the admin page or anywhere else
+
 
 **Test users and passwords**
 
