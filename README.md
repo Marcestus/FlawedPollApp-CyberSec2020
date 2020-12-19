@@ -8,4 +8,6 @@ The "documentation" directory holds a report of the vulnerabilities that are cre
 
 More details about the course can be found in [course's webpage](https://cybersecuritybase.mooc.fi/module-3.1).
 
+## Description of the app
+
 ## How to download and use the app
