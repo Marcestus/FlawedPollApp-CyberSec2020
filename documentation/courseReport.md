@@ -60,8 +60,10 @@ To fix this, the debug mode should be disabled (mysite/mysite/settings.py -> DEB
 The programmer has implemented a handy search feature to the ”localhost:8000/polls” page. Unfortunately, as can be seen from mysite/polls/templates/polls/index.html, the script of the search is done unsafely (+ searchResult.get(”search”)), which enables XSS attacks and thus it is possible for example to steal cookies and other sensitive information from the page. As this enables the permanent type of XSS attack, this is very serious flaw, since it can effect everyone who uses the app.
 
 This flaw can be verified by giving some script command to the search field in ”localhost:8000/polls” like (combine these two rows below and give it to search feature -> press search -> the gif is added to the page permanently):
+```
 <img src="https://media.giphy.com/
 media/g9582DNuQppxC/giphy.gif"/>
+```
 
 To fix this flaw, the programmer should secure the search feature by escaping the input correctly. For example, Django would detect the possible attack automatically if the code was written like this: <span id="search-query" >The poll you searched is {{ search }}</span>
 
