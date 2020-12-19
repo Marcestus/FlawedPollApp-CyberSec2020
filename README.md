@@ -24,27 +24,26 @@ The app is a (very) basic voting app. After login, you can choose a poll to vote
   - user Bob password Builder (user access)
   - user Evan password Allmighty (user access)
   - user Crusty password Clown (superuser access)
-6. You can find the admin page in localhost:8000/admin
+6. Vote for polls and search them
+  - there are three polls available (numbered 2, 3 and 4)
+  - notice that the search feature just tells what you have searched for
+7. You can find the admin page in localhost:8000/admin
   - user Crusty has superuser access and can view the admin page features
 
 ## Screenshots of the pages
 
-- localhost:8000/polls/
+**The main page of the app, has polls listed and search feature** (localhost:8000/polls/)
 
-the main page of the app, has polls listed and search feature
 ![mainpage](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/mainpage.png)
 
-- localhost:8000/polls/2
+**The voting page for poll 2** (localhost:8000/polls/2)
 
-the voting page for poll 2 (there are 3 polls available numbered 2, 3 and 4)
 ![voting](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/voting.png)
 
-- localhost:8000/polls/2/results
+**The results page for the poll 2** (localhost:8000/polls/2/results)
 
-the result page for the poll 2 (again 3 polls available numbered 2, 3 and 4)
 ![voted](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/voted.png)
 
-- localhost:8000/admin
+**The admin page of the app** (localhost:8000/admin)
 
-the admin page of the app
 ![adminpage](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/adminpage.png)
