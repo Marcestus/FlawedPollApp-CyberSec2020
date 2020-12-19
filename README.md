@@ -34,16 +34,16 @@ The app is a (very) basic voting app. After login, you can choose a poll to vote
 
 **The main page of the app, has polls listed and search feature** (localhost:8000/polls/)
 
-![mainpage](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/mainpage.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![mainpage](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/mainpage.png)
 
 **The voting page for poll 2** (localhost:8000/polls/2)
 
-![voting](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/voting.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![voting](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/voting.png)
 
 **The results page for the poll 2** (localhost:8000/polls/2/results)
 
-![voted](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/voted.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![voted](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/voted.png)
 
 **The admin page of the app** (localhost:8000/admin)
 
-![adminpage](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/adminpage.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![adminpage](https://github.com/Marcestus/cyber-sec-project1/blob/master/documentation/pictures/adminpage.png)
